@@ -17,6 +17,9 @@ public class Fruit {
     @Column(length = 32)
     private  String color;
 
+    public Fruit() {
+    }
+
     public Fruit(int id, int price, String name, String color) {
         this.id = id;
         this.price = price;

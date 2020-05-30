@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        input{
+            display: block;
+        }
+        ul{
+            list-style: none;
+            display: block;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+        li{
+            margin:20px;
+            border: 1px solid rgba(0,0,0,5);
+            padding:10px;
+        }
+        div h1{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div><h1>水果界面</h1></div>
+<div>
+    <ul id="list">
+
+    </ul>
+</div>
+<!--        <button onclick="show()">显示水果信息</button>-->
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+       //function show() {
+           $.get("http://127.0.0.1:8080/findall", function(result) {
+               var item=result;
+               console.log(item);
+                var fruitList = document.getElementById('list')
+               item.forEach(function (item) {
+                  fruitList.innerHTML+=`
+        <li>
+            <p>id:${item.id}</p>
+            <p>name:${item.name}</p>
+            <p>price:${item.price}</p>
+            <p>color:${item.color}</p>
+        </li>
+                  `
+               })
+           }, "json");
+       //}
+</script>
+</body>
+</html>
