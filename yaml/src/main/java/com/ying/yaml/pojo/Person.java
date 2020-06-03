@@ -2,15 +2,29 @@ package com.ying.yaml.pojo;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
-import javax.imageio.plugins.jpeg.JPEGImageReadParam;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Null;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+/*
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
+ */
 @Component
+/*
+        jsr 303校验
+ */
 @ConfigurationProperties(prefix = "person")
+@Validated//数据校验
 public class Person {
+   @Max(value = 30,message = "年龄不能超过10岁")
     private Integer age;
     private String name;
     private boolean happy;
