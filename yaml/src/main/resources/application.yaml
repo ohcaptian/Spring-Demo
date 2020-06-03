@@ -1,0 +1,15 @@
+#yaml配置
+person:
+ age: 20
+ name: 张三
+ happy: false
+ birth: 2001//11//02
+ map: {k1: v1,k2: v2}
+ list:
+    - code
+    - music
+    - gile
+ dog:
+  name: 旺财
+  age: 8
+

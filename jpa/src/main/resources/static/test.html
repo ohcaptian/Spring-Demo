@@ -38,10 +38,10 @@
 
     </ul>
 </div>
-<!--        <button onclick="show()">显示水果信息</button>-->
+        <button onclick="show()">显示水果信息</button>
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript">
-       //function show() {
+       function show() {
            $.get("http://127.0.0.1:8080/findall", function(result) {
                var item=result;
                console.log(item);
@@ -57,7 +57,7 @@
                   `
                })
            }, "json");
-       //}
+       }
 </script>
 </body>
 </html>
