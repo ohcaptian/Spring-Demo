@@ -16,6 +16,9 @@ public class HelloControler {
    @RequestMapping("/index")
     public String test(Model model){
        model.addAttribute("msg","hello thymeleft");
+       model.addAttribute("users","hello");
+//       model.addAttribute("users","world");
+//       model.addAttribute("users","！");
         return "index";
     }
 }

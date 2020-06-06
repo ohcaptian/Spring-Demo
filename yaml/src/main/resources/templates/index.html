@@ -11,5 +11,7 @@
 <body>
 <!--        使用thymeleft需要在html-->
           <div th:text="${msg}"></div>
+<!--        遍历元素-->
+        <div th:each="user:${users}" th:text="${user}"></div>
 </body>
 </html>
