@@ -73,7 +73,7 @@
 								<td th:text="${emp.getGender()==0?'女':'男'}"></td>
 								<td th:text="${emp.getBirth()}"></td>
                                 <td>
-                                    <a class="btn btn-sm btn-primary">修改</a>
+                                    <a class="btn btn-sm btn-primary" th:href="@{/emp/}+${emp.getId()}">修改</a>
                                     <a class="btn btn-sm btn-danger" th:href="@{/delemp/}+${emp.getId()}">删除</a>
                                 </td>
 
