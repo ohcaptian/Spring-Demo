@@ -1,9 +1,15 @@
 spring:
  datasource:
   username: root
-  password: admin
-  url: jdbc:mysql://127.0.0.1:3306/learn?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
-  driver-class-name: com.mysql.cj.jdbc.Driver
+  password: 123456
+  url: jdbc:mysql://127.0.0.1:3306/mybatis?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#  springboot可以自动检测
+driver-class-name: com.mysql.jdbc.Driver
+#XML方式的注解
+#mybatis:
+#  mapper-locations: classpath:sqlmapper/*.xml
+#  type-aliases-package: com.ying.pojo
+#开启控制台打印SQL语句
 mybatis:
-  mapper-locations: classpath:sqlmapper/*.xml
-  type-aliases-package: com.ying.pojo
+ configuration:
+  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

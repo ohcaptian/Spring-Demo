@@ -2,14 +2,18 @@ package com.ying.pojo;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import org.springframework.stereotype.Component;
 
-import java.sql.Timestamp;
+
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @Component
-public class Department {
+public class User {
     private Integer id;
-    private String department;
+    private String name;
+    private Integer age;
+    private Date createTime;
 }
