@@ -51,5 +51,11 @@ public class UserController {
             userService.updateUser(user);
             return "success";
     }
+    //测试事务
+    @GetMapping("add_count")
+    public Object addAccout(){
+        int id = userService.addCount();
+        return id;
+    }
 
 }
